@@ -15,7 +15,7 @@ function Modal({ id, title, children }: ModalProps) {
             </button>
           </form>
           <h3 className="font-bold text-lg">{title}</h3>
-          <p className="py-4">{children}</p>
+          <div className="py-4">{children}</div>
         </div>
       </dialog>
     </>
