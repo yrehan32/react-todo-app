@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import NewForm from "./components/NewForm";
 import TodoList from "./components/TodoList";
 
@@ -10,7 +11,7 @@ function App() {
       return [
         ...currentTodos,
         {
-          id: crypto.randomUUID(),
+          id: uuidv4(),
           task: title,
           completed: false,
         },

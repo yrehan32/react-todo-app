@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 interface TableProps {
   headers: string[];
   children: React.ReactNode;
@@ -11,7 +12,7 @@ function Table({ headers, children }: TableProps) {
         <thead>
           <tr>
             {headers.map((header) => (
-              <th key={crypto.randomUUID()}>{header}</th>
+              <th key={uuidv4()}>{header}</th>
             ))}
           </tr>
         </thead>

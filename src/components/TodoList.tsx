@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 import Modal from "./Modal";
 import Table from "./Table";
 
@@ -19,7 +20,7 @@ function TodoList({ todoList, toggleTodo, deleteTodo }: TodoProps) {
               <th>
                 <label>
                   <input
-                    id={crypto.randomUUID()}
+                    id={uuidv4()}
                     type="checkbox"
                     className="checkbox"
                     checked={todo.completed}
